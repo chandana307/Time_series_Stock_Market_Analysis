@@ -55,8 +55,8 @@ A Streamlit-powered web app that forecasts stock prices using advanced time seri
 1. Clone the Repository
 
 
-git clone https://github.com/abhijit1620/stock-forecasting-app.git
-cd stock-forecasting-app
+git clone https://github.com/chandana307/Time_series_Stock_Market_Analysis.git
+
 
 2. Run App
 
@@ -64,7 +64,7 @@ streamlit run streamlit_app.py
 
 ** Author **
 
-Abhijeet Sharma
-BTech CSE-AIML | Lucknow
-abhijitsharma.ab@gmail.com
+Chandana R
+MCA | Banglore
+
 
