@@ -1,6 +1,6 @@
-import yfinance as yf
-import pandas as pd
-import os
+import yfinance as yf   #for fetching the data 
+import pandas as pd     #for data framing
+import os             # for creating the folder 
 
 os.makedirs("data", exist_ok=True)
 
@@ -16,13 +16,13 @@ for ticker in tickers:
     
     if not df.empty:
         df.reset_index(inplace=True)
-        df['Company'] = ticker
-        all_data.append(df)
+        df['Company'] = ticker #Adds company name as a new column (df['Company'] = ticker)
+        all_data.append(df) #Appends each company's data to the all_data list
     else:
         print(f"⚠️ No data found for {ticker}")
 
 if all_data:
-    combined_df = pd.concat(all_data, ignore_index=True)
+    combined_df = pd.concat(all_data, ignore_index=True)#Merges all company data into one DataFrame
     print(f" Combined dataset rows: {len(combined_df)}")
 
     sample_df = combined_df.sample(n=10000, random_state=42)

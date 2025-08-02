@@ -23,7 +23,8 @@ def train_prophet(df, periods=30, show_plot=True):
 
     # Initialize and train model
     model = Prophet(daily_seasonality=True)
-    model.fit(prophet_df)
+    model.fit(prophet_df) #fit() tells Prophet to learn from the past data.
+
 
     # Create future dates
     future = model.make_future_dataframe(periods=periods)
